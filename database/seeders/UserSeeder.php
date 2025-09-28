@@ -14,57 +14,71 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         // Create admin user
-        User::factory()->create([
-            'name' => 'Administrator',
-            'email' => 'admin@testing.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'admin@blog.test'],
+            [
+                'name' => 'Administrator',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
         // Create editor user
-        User::factory()->create([
-            'name' => 'Editor Blog',
-            'email' => 'editor@testing.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'editor@blog.test'],
+            [
+                'name' => 'Editor Blog',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
         // Create author user
-        User::factory()->create([
-            'name' => 'Penulis Artikel',
-            'email' => 'author@testing.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'author@blog.test'],
+            [
+                'name' => 'Penulis Artikel',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
         // Create regular users who will be commenters
-        User::factory()->create([
-            'name' => 'Ahmad Santoso',
-            'email' => 'ahmad@testing.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'ahmad@example.com'],
+            [
+                'name' => 'Ahmad Santoso',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Siti Nurhaliza',
-            'email' => 'siti@testing.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'siti@example.com'],
+            [
+                'name' => 'Siti Nurhaliza',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Budi Setiawan',
-            'email' => 'budi@testing.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'budi@example.com'],
+            [
+                'name' => 'Budi Setiawan',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Maya Sari',
-            'email' => 'maya@testing.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'maya@example.com'],
+            [
+                'name' => 'Maya Sari',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
         // Note: Only using specific user definitions, no random factory data
     }

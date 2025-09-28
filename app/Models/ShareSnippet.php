@@ -20,4 +20,12 @@ class ShareSnippet extends Model
     protected $casts = [
         'active' => 'boolean',
     ];
+
+    /**
+     * Scope a query to only include active share snippets.
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('active', true);
+    }
 }

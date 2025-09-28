@@ -89,4 +89,30 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    /**
+     * Scope a query to only include published posts.
+     */
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'published')
+            ->where('published_at', '<=', now());
+    }
+
+    /**
+     * Scope a query to only include scheduled posts.
+     */
+    public function scopeScheduled($query)
+    {
+        return $query->where('status', 'scheduled')
+            ->where('scheduled_for', '<=', now());
+    }
+
+    /**
+     * Scope a query to only include pending posts.
+     */
+    public function scopePending($query)
+    {
+        return $query->where('status', 'pending');
+    }
 }

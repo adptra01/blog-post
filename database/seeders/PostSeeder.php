@@ -150,23 +150,23 @@ class PostSeeder extends Seeder
         try {
             $posts = [
                 [
-                    'title' => 'Mengenal Framework Laravel untuk Pengembangan Web Modern',
-                    'sub_title' => 'Panduan lengkap memulai dengan Laravel',
-                    'body' => '<p>Laravel adalah framework PHP yang powerful untuk pengembangan web modern. Framework ini menyediakan berbagai fitur siap pakai yang memudahkan developer dalam membangun aplikasi web.</p><p>Dengan Laravel, Anda dapat fokus pada logika bisnis aplikasi tanpa perlu khawatir dengan hal-hal teknis yang repetitif.</p>',
+                    'title' => 'Panen Nanas Raya di Desa Tangkit 2024',
+                    'sub_title' => 'Petani Desa Tangkit berhasil panen nanas dengan hasil melimpah',
+                    'body' => '<p>Desa Tangkit kembali menunjukkan keunggulannya sebagai sentra produksi nanas di wilayah ini. Pada panen raya tahun 2024, petani desa berhasil mengumpulkan ribuan kilogram nanas berkualitas tinggi.</p><p>Kegiatan panen ini melibatkan seluruh warga dan menjadi momentum untuk memperkuat solidaritas antarwarga. Nanas-nanas ini akan diolah menjadi berbagai produk olahan yang menjadi ciri khas Desa Tangkit.</p>',
                     'status' => 'published',
                     'published_at' => now()->subDays(rand(0, 30)),
                 ],
                 [
-                    'title' => 'Tips dan Trik Programming untuk Developer Pemula',
-                    'sub_title' => 'Rahasia sukses dalam dunia programming',
-                    'body' => '<p>Programming bukan hanya tentang menulis kode, tetapi juga tentang problem solving dan logical thinking. Sebagai developer pemula, ada beberapa tips yang perlu diperhatikan.</p><p>Konsistensi dalam belajar dan praktek adalah kunci utama kesuksesan di bidang programming.</p>',
+                    'title' => 'UMKM Keripik Nanas Tangkit Raih Penghargaan',
+                    'sub_title' => 'Produk olahan nanas dari Desa Tangkit mendapat pengakuan nasional',
+                    'body' => '<p>Salah satu UMKM di Desa Tangkit yang mengolah nanas menjadi keripik berhasil meraih penghargaan dalam kompetisi produk olahan pangan tingkat nasional. Produk keripik nanas dengan rasa autentik khas Desa Tangkit ini mendapat sambutan positif dari juri.</p><p>Keberhasilan ini membuktikan bahwa potensi pertanian Desa Tangkit tidak hanya berhenti di produksi nanas mentah, tetapi juga bisa dikembangkan menjadi produk bernilai tambah tinggi.</p>',
                     'status' => 'published',
                     'published_at' => now()->subDays(rand(0, 30)),
                 ],
                 [
-                    'title' => 'Membangun Aplikasi Mobile dengan React Native',
-                    'sub_title' => 'Cross-platform development untuk iOS dan Android',
-                    'body' => '<p>React Native memungkinkan developer untuk membangun aplikasi mobile menggunakan JavaScript dan React. Framework ini mendukung cross-platform development untuk iOS dan Android.</p><p>Dengan React Native, Anda dapat menulis satu codebase untuk dua platform berbeda.</p>',
+                    'title' => 'Wisata Agrowisata Nanas Tangkit Dibuka untuk Umum',
+                    'sub_title' => 'Desa Tangkit kembangkan wisata edukasi pertanian nanas',
+                    'body' => '<p>Desa Tangkit resmi membuka wisata agrowisata nanas untuk masyarakat umum. Pengunjung dapat belajar langsung tentang proses budidaya nanas, dari penanaman hingga panen. Wisata ini juga menampilkan berbagai produk olahan nanas yang menjadi unggulan desa.</p><p>Diharapkan wisata ini dapat meningkatkan pendapatan desa sekaligus menjadi sarana edukasi tentang pertanian modern.</p>',
                     'status' => 'published',
                     'published_at' => now()->subDays(rand(0, 30)),
                 ],
@@ -238,21 +238,21 @@ class PostSeeder extends Seeder
     {
         $scheduledPosts = [
             [
-                'title' => 'Tren Teknologi di Tahun 2025',
-                'sub_title' => 'Prediksi perkembangan teknologi tahun depan',
-                'body' => '<p>Tahun 2025 diprediksi akan menjadi tahun yang menarik untuk perkembangan teknologi. Beberapa tren seperti AI, blockchain, dan IoT akan semakin matang dan diterapkan secara luas.</p><p>Para developer perlu mempersiapkan diri dengan mempelajari teknologi-teknologi terbaru ini.</p>',
+                'title' => 'Festival Nanas Tangkit 2025',
+                'sub_title' => 'Perayaan panen nanas dengan berbagai kegiatan budaya',
+                'body' => '<p>Desa Tangkit akan menggelar Festival Nanas sebagai bentuk syukur atas hasil panen yang melimpah. Festival ini akan menampilkan berbagai kegiatan seperti lomba olahan nanas, pertunjukan budaya, dan bazaar produk lokal.</p><p>Acara ini diharapkan dapat meningkatkan citra Desa Tangkit sebagai sentra produksi nanas sekaligus memperkenalkan potensi wisata desa kepada masyarakat luas.</p>',
                 'scheduled_for' => now()->addDays(rand(1, 30)),
             ],
             [
-                'title' => 'Machine Learning untuk Bisnis',
-                'sub_title' => 'Penerapan ML dalam dunia bisnis modern',
-                'body' => '<p>Machine Learning bukan lagi teknologi masa depan, melainkan teknologi yang sudah bisa diterapkan sekarang. Banyak perusahaan yang sudah memanfaatkan ML untuk meningkatkan efisiensi operasional mereka.</p><p>Dalam artikel ini kita akan membahas bagaimana bisnis dapat memanfaatkan machine learning.</p>',
+                'title' => 'Pelatihan Pengolahan Nanas untuk Warga',
+                'sub_title' => 'Kegiatan pemberdayaan UMKM pengolahan nanas',
+                'body' => '<p>Pemerintah Desa Tangkit akan menyelenggarakan pelatihan pengolahan nanas menjadi berbagai produk bernilai tambah. Pelatihan ini bertujuan untuk meningkatkan keterampilan warga dalam mengembangkan usaha berbasis nanas.</p><p>Materi yang akan disampaikan meliputi teknik pengolahan, packaging, dan pemasaran produk olahan nanas.</p>',
                 'scheduled_for' => now()->addDays(rand(1, 30)),
             ],
             [
-                'title' => 'Cyber Security di Era Digital',
-                'sub_title' => 'Melindungi data di tengah ancaman digital',
-                'body' => '<p>Di era digital ini, keamanan data menjadi prioritas utama bagi setiap organisasi. Ancaman cyber crime semakin canggih dan sering terjadi.</p><p>Penting bagi setiap perusahaan untuk memiliki strategi cyber security yang komprehensif.</p>',
+                'title' => 'Rapat Musyawarah Desa Tangkit',
+                'sub_title' => 'Pembahasan program pembangunan desa tahun 2025',
+                'body' => '<p>Akan diselenggarakan rapat musyawarah desa untuk membahas program pembangunan Desa Tangkit tahun 2025. Rapat ini akan melibatkan seluruh perangkat desa dan tokoh masyarakat.</p><p>Agenda utama adalah penyusunan APBDes dan program prioritas pembangunan infrastruktur desa.</p>',
                 'scheduled_for' => now()->addDays(rand(1, 30)),
             ],
         ];
@@ -296,29 +296,29 @@ class PostSeeder extends Seeder
     {
         $pendingPosts = [
             [
-                'title' => 'Blockchain Technology dan Masa Depan Keuangan',
-                'sub_title' => 'Revolusi sistem keuangan dengan blockchain',
-                'body' => '<p>Blockchain technology bukan hanya tentang cryptocurrency, tetapi juga tentang revolusi sistem keuangan secara keseluruhan. Teknologi ini menawarkan transparansi, keamanan, dan efisiensi yang lebih baik.</p><p>Masa depan keuangan diprediksi akan banyak dipengaruhi oleh perkembangan blockchain technology.</p>',
+                'title' => 'Potensi Wisata Desa Tangkit',
+                'sub_title' => 'Menjelajahi keindahan alam dan budaya Desa Tangkit',
+                'body' => '<p>Desa Tangkit tidak hanya dikenal sebagai sentra produksi nanas, tetapi juga memiliki potensi wisata yang menarik. Wisatawan dapat menikmati keindahan perkebunan nanas yang hijau, mengunjungi tempat pengolahan nanas, dan belajar tentang budaya lokal.</p><p>Pemerintah desa sedang mengembangkan paket wisata yang mencakup agrowisata, kuliner khas, dan pengenalan budaya masyarakat Tangkit.</p>',
             ],
             [
-                'title' => 'Cloud Computing: Solusi IT untuk Bisnis Modern',
-                'sub_title' => 'Memanfaatkan cloud untuk skalabilitas bisnis',
-                'body' => '<p>Cloud computing telah menjadi tulang punggung infrastruktur IT modern. Banyak perusahaan yang beralih ke cloud untuk mendapatkan skalabilitas, fleksibilitas, dan efisiensi biaya.</p><p>Dalam artikel ini kita akan membahas berbagai aspek cloud computing untuk bisnis.</p>',
+                'title' => 'Program Kesehatan Masyarakat Desa Tangkit',
+                'sub_title' => 'Pelayanan kesehatan untuk warga Desa Tangkit',
+                'body' => '<p>Desa Tangkit memiliki program kesehatan masyarakat yang komprehensif, termasuk posyandu rutin, pemeriksaan kesehatan gratis, dan penyuluhan kesehatan. Program ini bertujuan untuk meningkatkan derajat kesehatan warga desa.</p><p>Kegiatan posyandu dilaksanakan setiap bulan dengan melibatkan kader kesehatan dan tenaga medis dari puskesmas setempat.</p>',
             ],
             [
-                'title' => 'UI/UX Design: Meningkatkan Pengalaman Pengguna',
-                'sub_title' => 'Prinsip-prinsip desain yang user-friendly',
-                'body' => '<p>UI/UX Design memainkan peran penting dalam kesuksesan sebuah aplikasi atau website. Desain yang baik dapat meningkatkan user engagement dan satisfaction.</p><p>Penting bagi designer untuk memahami prinsip-prinsip UX yang baik.</p>',
+                'title' => 'Infrastruktur Jalan Desa Tangkit',
+                'sub_title' => 'Pembangunan dan perbaikan jalan untuk kemajuan desa',
+                'body' => '<p>Pemerintah Desa Tangkit terus berupaya meningkatkan infrastruktur jalan untuk memudahkan akses warga dan mendukung kegiatan ekonomi. Beberapa ruas jalan desa telah diperbaiki dengan bantuan dari pemerintah kabupaten.</p><p>Pembangunan infrastruktur ini diharapkan dapat meningkatkan konektivitas dan mendukung pengembangan UMKM di desa.</p>',
             ],
             [
-                'title' => 'DevOps: Mempercepat Siklus Pengembangan Software',
-                'sub_title' => 'Integrasi development dan operations',
-                'body' => '<p>DevOps adalah praktik yang menggabungkan software development dan IT operations. Tujuannya adalah untuk mempersingkat siklus pengembangan sistem sambil meningkatkan kualitas produk.</p><p>Banyak perusahaan teknologi yang sudah mengadopsi budaya DevOps.</p>',
+                'title' => 'Pendidikan di Desa Tangkit',
+                'sub_title' => 'Fasilitas pendidikan dan program peningkatan mutu',
+                'body' => '<p>Desa Tangkit memiliki komitmen tinggi terhadap pendidikan warga. Terdapat beberapa sekolah dasar dan program pendidikan non-formal yang diselenggarakan oleh pemerintah desa dan masyarakat.</p><p>Program bimbingan belajar dan kegiatan ekstrakurikuler rutin diselenggarakan untuk mendukung perkembangan anak-anak desa.</p>',
             ],
             [
-                'title' => 'Internet of Things (IoT) dan Smart Home',
-                'sub_title' => 'Teknologi rumah pintar untuk kehidupan modern',
-                'body' => '<p>Internet of Things (IoT) memungkinkan berbagai perangkat untuk terhubung dan berkomunikasi satu sama lain. Teknologi ini membawa konsep smart home ke dalam kehidupan sehari-hari.</p><p>Masa depan rumah tangga akan semakin dipengaruhi oleh perkembangan IoT.</p>',
+                'title' => 'Pelestarian Lingkungan Desa Tangkit',
+                'sub_title' => 'Program kebersihan dan pelestarian alam',
+                'body' => '<p>Desa Tangkit aktif dalam program pelestarian lingkungan dengan kegiatan bersih-bersih rutin, penanaman pohon, dan pengelolaan sampah. Kesadaran masyarakat terhadap pentingnya lingkungan hidup terus ditingkatkan.</p><p>Program ini tidak hanya menjaga kebersihan desa, tetapi juga mendukung keberlanjutan pertanian nanas sebagai komoditas utama.</p>',
             ],
         ];
 

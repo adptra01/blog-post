@@ -36,6 +36,8 @@ class NewsletterSeeder extends Seeder
             );
         }
 
-        $this->command->info('Created ' . Newsletter::count() . ' newsletter subscribers');
+        // Note: Only using specific subscriber definitions, no random factory data
+
+        $this->command->info('Created '.Newsletter::count().' newsletter subscribers');
     }
 }

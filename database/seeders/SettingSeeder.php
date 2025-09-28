@@ -13,48 +13,48 @@ class SettingSeeder extends Seeder
     public function run(): void
     {
         Setting::create([
-            'title' => 'Blog Teknologi Modern',
-            'description' => 'Platform berbagi pengetahuan tentang teknologi, programming, dan inovasi digital terkini. Temukan artikel-artikel berkualitas tentang web development, mobile development, AI, machine learning, dan masih banyak lagi.',
-            'logo' => '/images/logo.png',
-            'favicon' => '/images/favicon.ico',
-            'organization_name' => 'Tech Blog Indonesia',
+            'title' => 'Portal Berita Desa Tangkit',
+            'description' => 'Selamat datang di Portal Berita Desa Tangkit - sentra produksi nanas terkemuka. Temukan informasi terkini tentang kegiatan desa, potensi UMKM, wisata lokal, dan berbagai program pembangunan untuk kemajuan bersama.',
+            'logo' => '/images/logo-tangkit.png',
+            'favicon' => '/images/favicon-tangkit.ico',
+            'organization_name' => 'Pemerintah Desa Tangkit',
             'google_console_code' => null,
-            'google_analytic_code' => 'GA-XXXXXXXXX',
+            'google_analytic_code' => 'GA-TANGKIT-2024',
             'google_adsense_code' => null,
             'quick_links' => [
                 [
-                    'title' => 'Laravel',
-                    'url' => '/categories/laravel',
-                    'icon' => 'fab fa-laravel',
+                    'title' => 'UMKM Nanas',
+                    'url' => '/kategori/umkm-produk-lokal',
+                    'icon' => 'fas fa-store',
                 ],
                 [
-                    'title' => 'React',
-                    'url' => '/categories/react',
-                    'icon' => 'fab fa-react',
+                    'title' => 'Wisata Desa',
+                    'url' => '/kategori/wisata-budaya',
+                    'icon' => 'fas fa-tree',
                 ],
                 [
-                    'title' => 'Vue.js',
-                    'url' => '/categories/vuejs',
-                    'icon' => 'fab fa-vuejs',
+                    'title' => 'Pengumuman',
+                    'url' => '/kategori/pengumuman-resmi',
+                    'icon' => 'fas fa-bullhorn',
                 ],
                 [
-                    'title' => 'Python',
-                    'url' => '/categories/python',
-                    'icon' => 'fab fa-python',
+                    'title' => 'Kegiatan',
+                    'url' => '/kategori/kegiatan-desa',
+                    'icon' => 'fas fa-users',
                 ],
                 [
-                    'title' => 'JavaScript',
-                    'url' => '/categories/javascript',
-                    'icon' => 'fab fa-js-square',
+                    'title' => 'Pertanian',
+                    'url' => '/kategori/pertanian-perkebunan',
+                    'icon' => 'fas fa-seedling',
                 ],
                 [
-                    'title' => 'PHP',
-                    'url' => '/categories/php',
-                    'icon' => 'fab fa-php',
+                    'title' => 'Profil Desa',
+                    'url' => '/profil-desa',
+                    'icon' => 'fas fa-info-circle',
                 ],
             ],
         ]);
 
-        $this->command->info('Created blog settings');
+        $this->command->info('Created village settings for Desa Tangkit');
     }
 }
