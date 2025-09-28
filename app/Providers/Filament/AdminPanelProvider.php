@@ -53,7 +53,7 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->plugins([
-                Blog::make()
+                Blog::make(),
             ])
             ->authMiddleware([
                 Authenticate::class,
