@@ -40,33 +40,32 @@ class UserSeeder extends Seeder
         // Create regular users who will be commenters
         User::factory()->create([
             'name' => 'Ahmad Santoso',
-            'email' => 'ahmad@example.com',
+            'email' => 'ahmad@testing.com',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
         ]);
 
         User::factory()->create([
             'name' => 'Siti Nurhaliza',
-            'email' => 'siti@example.com',
+            'email' => 'siti@testing.com',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
         ]);
 
         User::factory()->create([
             'name' => 'Budi Setiawan',
-            'email' => 'budi@example.com',
+            'email' => 'budi@testing.com',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
         ]);
 
         User::factory()->create([
             'name' => 'Maya Sari',
-            'email' => 'maya@example.com',
+            'email' => 'maya@testing.com',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
         ]);
 
-        // Create additional random users for more realistic data
-        User::factory(15)->create();
+        // Note: Only using specific user definitions, no random factory data
     }
 }

@@ -30,7 +30,7 @@ class CommentSeeder extends Seeder
         try {
             $jsonPlaceholderComments = Http::timeout(10)->get('https://jsonplaceholder.typicode.com/comments')->json();
         } catch (\Exception $e) {
-            $this->command->warn('Failed to fetch from JSONPlaceholder API. Using factory data instead.');
+            $this->command->warn('Failed to fetch from JSONPlaceholder API. Using fallback data instead.');
             $jsonPlaceholderComments = [];
         }
 
@@ -57,13 +57,41 @@ class CommentSeeder extends Seeder
             }
         }
 
-        // Create additional comments using factory if we need more
-        $remainingComments = 150 - $commentsCreated;
+        // Create additional specific comments if we need more
+        $remainingComments = 50 - $commentsCreated;
         if ($remainingComments > 0) {
-            Comment::factory($remainingComments)->create([
-                'post_id' => $posts->random()->id,
-                'user_id' => $users->random()->id,
-            ]);
+            $commentTexts = [
+                'Artikel yang sangat informatif! Terima kasih atas sharingnya.',
+                'Penjelasan yang sangat mudah dipahami. Bagus sekali!',
+                'Saya setuju dengan poin-poin yang disampaikan.',
+                'Ini sangat membantu untuk project saya. Thanks!',
+                'Kapan dilanjut dengan part berikutnya?',
+                'Apakah ada referensi tambahan yang bisa dipelajari?',
+                'Saya baru belajar tentang ini, sangat bermanfaat.',
+                'Bagus! Sudah bookmark untuk dibaca lagi nanti.',
+                'Penjelasan detail dan mudah diikuti.',
+                'Materi yang sangat berguna untuk developer pemula.',
+                'Saya rasa masih ada yang kurang di bagian implementasi.',
+                'Apakah bisa dijelaskan lebih detail lagi?',
+                'Mantap! Sudah langsung saya praktekkan.',
+                'Artikel ini sangat recommended untuk dibaca.',
+                'Thanks atas tutorialnya, sangat membantu!',
+                'Pertanyaan yang bagus, saya juga penasaran dengan hal yang sama.',
+                'Sudah coba implementasi dan berhasil! Terima kasih banyak.',
+                'Explanation is clear and concise. Well done!',
+                'Looking forward to more advanced topics.',
+                'This really helped me understand the concept better.',
+            ];
+
+            for ($i = 0; $i < $remainingComments; $i++) {
+                Comment::create([
+                    'user_id' => $users->random()->id,
+                    'post_id' => $posts->random()->id,
+                    'comment' => $commentTexts[$i % count($commentTexts)],
+                    'approved' => rand(1, 100) <= 85,
+                    'approved_at' => rand(1, 100) <= 85 ? now()->subDays(rand(0, 30)) : null,
+                ]);
+            }
         }
 
         $this->command->info('Created '.Comment::count().' comments');

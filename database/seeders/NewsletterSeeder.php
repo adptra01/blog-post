@@ -36,12 +36,6 @@ class NewsletterSeeder extends Seeder
             );
         }
 
-        // Create additional random subscribers using factory
-        Newsletter::factory(50)->create();
-
-        // Create some unsubscribed users
-        Newsletter::factory(10)->unsubscribed()->create();
-
-        $this->command->info('Created '.Newsletter::count().' newsletter subscribers');
+        $this->command->info('Created ' . Newsletter::count() . ' newsletter subscribers');
     }
 }
