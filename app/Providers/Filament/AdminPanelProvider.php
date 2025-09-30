@@ -2,7 +2,7 @@
 
 namespace App\Providers\Filament;
 
-use Filament\Auth\Pages\EditProfile;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -62,7 +62,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 Blog::make(),
+                FilamentShieldPlugin::make(),
             ])
-            ->profile(isSimple: false);
+            ->profile(isSimple: false)
+            ->databaseNotifications()
+            ->databaseTransactions();
     }
 }

@@ -31,12 +31,12 @@ class AppServiceProvider extends ServiceProvider
         // Prevents mixed content errors (HTTPS page loading HTTP assets)
         if (request()->server('HTTP_X_FORWARDED_PROTO') === 'https' ||
             request()->header('X-Forwarded-Proto') === 'https' ||
-            (!empty(env('NGROK_URL')) && str_starts_with(env('NGROK_URL'), 'https'))) {
+            (! empty(env('NGROK_URL')) && str_starts_with(env('NGROK_URL'), 'https'))) {
             URL::forceScheme('https');
         }
 
         // Force secure asset URLs when using ngrok
-        if (!empty(env('NGROK_URL'))) {
+        if (! empty(env('NGROK_URL'))) {
             URL::forceRootUrl(env('NGROK_URL'));
         }
     }

@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         // Seed Users
         $users = User::factory(10)->create();
 
-        $admin = User::factory()->create([
+        User::factory()->create([
             'name' => 'Test User',
             'email' => 'admin@testing.com',
         ]);
@@ -83,6 +83,10 @@ class DatabaseSeeder extends Seeder
                     'approved' => rand(0, 1) === 1, // Random approved status
                 ]);
         });
+
+        $this->call([
+            ShieldSeeder::class,
+        ]);
 
         // ShareSnippetFactory::factory()->create(); // Commented out due to missing factory method
     }
