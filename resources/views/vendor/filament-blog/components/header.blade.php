@@ -4,7 +4,7 @@
         <div class="container mx-auto">
             <div class="flex justify-between gap-x-4">
                 <div class="flex items-center gap-x-10">
-                    <a href="{{config('filamentblog.route.home.url') ?? config('app.url')}}">
+                    <a href="/">
                         @if($logo)
                         <img src="{{ $logo }}" alt="{{ $title }}" class="max-h-[60px]" />
                         @else

@@ -57,7 +57,7 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                Blog::make()
+                Blog::make(),
             ]);
     }
 }

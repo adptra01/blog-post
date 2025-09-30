@@ -171,8 +171,6 @@
             <x-blog-header title="{{ $setting?->title }}" logo="{{ $setting?->logoImage }}" />
             <!-- Page Content -->
             <main>
-                <h1>WOOOOOOOOOOOOOOOOOOOOOOOOOWWWWWWWWWWWWWWWWWWW</h1>
-
                 {{ $slot }}
             </main>
 

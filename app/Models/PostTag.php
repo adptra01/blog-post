@@ -35,11 +35,11 @@ class PostTag extends Model
 
     protected static function newFactory()
     {
-        return new PostTagFactory();
+        return new PostTagFactory;
     }
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'post_' . config('filamentblog.tables.prefix') . 'tag';
+        return config('filamentblog.tables.prefix').'post_'.config('filamentblog.tables.prefix').'tag';
     }
 }

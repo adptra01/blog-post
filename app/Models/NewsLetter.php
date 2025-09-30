@@ -37,11 +37,11 @@ class NewsLetter extends Model
 
     protected static function newFactory()
     {
-        return new NewsLetterFactory();
+        return new NewsLetterFactory;
     }
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'news_letters';
+        return config('filamentblog.tables.prefix').'news_letters';
     }
 }

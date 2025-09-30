@@ -33,11 +33,11 @@ class CategoryPost extends Model
 
     protected static function newFactory()
     {
-        return new CategoryPostFactory();
+        return new CategoryPostFactory;
     }
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'category_' . config('filamentblog.tables.prefix') . 'post';
+        return config('filamentblog.tables.prefix').'category_'.config('filamentblog.tables.prefix').'post';
     }
 }

@@ -27,11 +27,11 @@ class Category extends Model
 
     protected static function newFactory()
     {
-        return new CategoryFactory();
+        return new CategoryFactory;
     }
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'categories';
+        return config('filamentblog.tables.prefix').'categories';
     }
 }

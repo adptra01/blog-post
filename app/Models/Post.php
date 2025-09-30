@@ -47,7 +47,7 @@ class Post extends Model
 
     protected static function newFactory()
     {
-        return new PostFactory();
+        return new PostFactory;
     }
 
     public function categories()
@@ -62,7 +62,7 @@ class Post extends Model
 
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class,config('filamentblog.tables.prefix').'post_'.config('filamentblog.tables.prefix').'tag');
+        return $this->belongsToMany(Tag::class, config('filamentblog.tables.prefix').'post_'.config('filamentblog.tables.prefix').'tag');
     }
 
     public function user(): BelongsTo
@@ -125,6 +125,6 @@ class Post extends Model
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'posts';
+        return config('filamentblog.tables.prefix').'posts';
     }
 }

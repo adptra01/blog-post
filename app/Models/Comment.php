@@ -50,7 +50,7 @@ class Comment extends Model
 
     protected static function newFactory()
     {
-        return new CommentFactory();
+        return new CommentFactory;
     }
 
     public function scopeApproved(Builder $query)
@@ -60,6 +60,6 @@ class Comment extends Model
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'comments';
+        return config('filamentblog.tables.prefix').'comments';
     }
 }

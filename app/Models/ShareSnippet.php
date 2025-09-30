@@ -13,7 +13,7 @@ class ShareSnippet extends Model
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'share_snippets';
+        return config('filamentblog.tables.prefix').'share_snippets';
     }
 
     protected $fillable = [
@@ -33,6 +33,6 @@ class ShareSnippet extends Model
 
     protected static function newFactory()
     {
-        return new ShareSnippetFactory();
+        return new ShareSnippetFactory;
     }
 }

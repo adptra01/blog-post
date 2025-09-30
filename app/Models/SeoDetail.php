@@ -64,11 +64,11 @@ class SeoDetail extends Model
 
     protected static function newFactory()
     {
-        return new SeoDetailFactory();
+        return new SeoDetailFactory;
     }
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'seo_details';
+        return config('filamentblog.tables.prefix').'seo_details';
     }
 }

@@ -28,11 +28,11 @@ class Tag extends Model
 
     protected static function newFactory()
     {
-        return new TagFactory();
+        return new TagFactory;
     }
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'tags';
+        return config('filamentblog.tables.prefix').'tags';
     }
 }

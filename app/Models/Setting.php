@@ -30,21 +30,21 @@ class Setting extends Model
 
     protected function getLogoImageAttribute()
     {
-        return asset('storage/' . $this->logo);
+        return asset('storage/'.$this->logo);
     }
 
     protected function getFavIconImageAttribute()
     {
-        return asset('storage/' . $this->favicon);
+        return asset('storage/'.$this->favicon);
     }
 
     protected static function newFactory()
     {
-        return new SettingFactory();
+        return new SettingFactory;
     }
 
     public function getTable()
     {
-        return config('filamentblog.tables.prefix') . 'settings';
+        return config('filamentblog.tables.prefix').'settings';
     }
 }
