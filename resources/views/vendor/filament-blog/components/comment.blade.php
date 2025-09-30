@@ -1,7 +1,7 @@
 @props(['post', 'canComment'])
 
 @if ($canComment)
-    <form action="{{ route('filamentblog.comment.store', ['post' => $post->slug]) }}" method="POST" id="comments">
+    <form action="{{ route('filamentblog.comment.store', ['post' => $post->slug]) }}" method="POST" id="comment-box">
         @csrf
         <div class="border-t-2 py-10">
             <div class="mb-7">
