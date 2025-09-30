@@ -3,11 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Firefly\FilamentBlog\Database\Factories\ShareSnippetFactory;
 use Firefly\FilamentBlog\Models\Category;
 use Firefly\FilamentBlog\Models\Comment;
 use Firefly\FilamentBlog\Models\Post;
 use Firefly\FilamentBlog\Models\Tag;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\UniqueConstraintViolationException;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +18,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Truncate tables to avoid unique constraint violations
+        User::truncate();
+        Category::truncate();
+        Tag::truncate();
+        Post::truncate();
+        Comment::truncate();
+
         // Seed Users
         $users = User::factory(10)->create();
 
@@ -25,10 +34,28 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Seed Categories
-        $categories = Category::factory(8)->create();
+        $categories = collect();
+        while ($categories->count() < 8) {
+            try {
+                $newCategories = Category::factory()->count(8 - $categories->count())->create();
+                $categories = $categories->merge($newCategories)->unique('id');
+            } catch (UniqueConstraintViolationException $e) {
+                // Skip duplicate and continue
+                continue;
+            }
+        }
 
         // Seed Tags
-        $tags = Tag::factory(15)->create();
+        $tags = collect();
+        while ($tags->count() < 15) {
+            try {
+                $newTags = Tag::factory()->count(15 - $tags->count())->create();
+                $tags = $tags->merge($newTags)->unique('id');
+            } catch (UniqueConstraintViolationException $e) {
+                // Skip duplicate and continue
+                continue;
+            }
+        }
 
         // Seed Posts dengan relasi
         $posts = Post::factory(30)
@@ -56,5 +83,7 @@ class DatabaseSeeder extends Seeder
                     'approved' => rand(0, 1) === 1, // Random approved status
                 ]);
         });
+
+        // ShareSnippetFactory::factory()->create(); // Commented out due to missing factory method
     }
 }

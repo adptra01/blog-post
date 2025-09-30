@@ -3,10 +3,6 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-
-use Database\Factories\UserFactory;
-use Firefly\FilamentBlog\Models\Post;
-use Firefly\FilamentBlog\Traits\HasBlog;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -14,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasBlog, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -48,20 +44,5 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-    }
-
-    public function canComment()
-    {
-        return true;
-    }
-
-    public function posts()
-    {
-        return $this->hasMany(Post::class);
-    }
-
-    protected static function newFactory()
-    {
-        return new UserFactory;
     }
 }

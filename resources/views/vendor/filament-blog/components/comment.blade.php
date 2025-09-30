@@ -30,7 +30,7 @@
     </form>
 @else
     <div class="border-t-2 py-10" id="comments">
-        <p class="text-center text-sm font-semibold">Please <a href="{{ route('filamentblog.post.login') }}"
+        <p class="text-center text-sm font-semibold">Please <a href="/admin/login"
                 class="text-primary-600 hover:text-primary-700">login</a> to post a comment and check if you have the
             permission to post a comment.</p>
     </div>
