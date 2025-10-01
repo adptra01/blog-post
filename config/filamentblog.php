@@ -32,10 +32,10 @@ return [
      * ------------------------------------------------------------
      */
     'route' => [
-        'prefix' => '/',
+        'prefix' => 'blogs',
         'middleware' => ['web'],
         'home' => [
-            'name' => '/',
+            'name' => 'filamentblog.home',
             'url' => env('APP_URL'),
         ],
         'login' => [

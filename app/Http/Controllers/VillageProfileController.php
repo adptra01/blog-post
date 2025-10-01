@@ -35,7 +35,7 @@ class VillageProfileController extends Controller
         $statistics = VillageProfile::active()
             ->section('statistics')
             ->first();
-        
+
         return view('village-profile.index', compact(
             'intro',
             'history',
