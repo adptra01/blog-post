@@ -35,7 +35,7 @@ return [
         'prefix' => '/',
         'middleware' => ['web'],
         'home' => [
-            'name' => 'filamentblog.home',
+            'name' => '/',
             'url' => env('APP_URL'),
         ],
         'login' => [

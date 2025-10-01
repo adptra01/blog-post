@@ -2,7 +2,7 @@
     <section class="pb-16">
         <div class="container mx-auto">
             <div class="mb-10 flex gap-x-2 text-sm font-semibold">
-                <a href="{{ route('filamentblog.post.index') }}" class="opacity-60">Home</a>
+                <a href="/" class="opacity-60">Home</a>
                 <span class="opacity-30">/</span>
                 <a href="{{ route('filamentblog.post.all') }}" class="opacity-60">Blog</a>
                 <span class="opacity-30">/</span>
